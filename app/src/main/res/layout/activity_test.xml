@@ -1,0 +1,199 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_top" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_tv_15dp" >
+
+            <Button
+                android:id="@+id/test_radar_btn"
+                style="@style/common_btn_style"
+                android:layout_marginLeft="@dimen/margin_tv_15dp"
+                android:layout_marginRight="@dimen/margin_tv_15dp"
+                android:background="@color/black"
+                android:text="雷达View"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_14sp" />
+
+            <Button
+                android:id="@+id/test_search_btn"
+                style="@style/common_btn_green_style"
+                android:text="搜索页" />
+
+            <Button
+                android:id="@+id/test_notify_db"
+                android:layout_marginLeft="@dimen/margin_tv_15dp"
+                style="@style/common_btn_green_style"
+                android:text="打开通知" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_tv_15dp"
+            android:layout_marginRight="@dimen/margin_tv_20dp"
+            android:layout_marginTop="@dimen/margin_tv_10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_tv_5dp">
+
+            <Button
+                android:id="@+id/test_progress_btn"
+                style="@style/common_btn_style"
+                android:background="@color/black"
+                android:text="处理意见-对话框"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_14sp" />
+
+            <Button
+                android:id="@+id/test_progress2_btn"
+                style="@style/common_btn_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:background="@color/black"
+                android:text="密码校验-对话框"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_tv_10dp">
+
+            <Button
+                android:id="@+id/test_rtsp_btn"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="实时-rtsp" />
+
+            <Button
+                android:id="@+id/test_path_btn"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="本地-MP4" />
+
+            <Button
+                android:id="@+id/test_mp3_btn"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="mp3播放" />
+
+            <Button
+                android:id="@+id/mp4_net_btn"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="网络mp4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_tv_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:textColor="@color/purple_color"
+                android:text=">>控制命令: " />
+
+            <Button
+                android:id="@+id/test_cmd_sure"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="模拟登陆" />
+
+            <Button
+                android:id="@+id/test_cmd_liediao"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="发列调" />
+
+            <Button
+                android:id="@+id/test_cmd_open_light"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="开告警灯" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_tv_10dp">
+
+            <Button
+                android:id="@+id/test_coordinate_btn"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="告警详情页" />
+
+            <Button
+                android:id="@+id/test_shortcut_btn"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="快捷方式" />
+
+
+            <Button
+                android:id="@+id/test_cut_btn"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="抠图" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_tv_10dp">
+
+            <Button
+                android:id="@+id/test_conn_dj"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="插入数据到GreenDao" />
+
+            <Button
+                android:id="@+id/test_ws_btn"
+                style="@style/common_btn_green_style"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="连接webservice" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/test_result_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_tv_20dp"
+            android:layout_marginRight="@dimen/margin_tv_20dp"
+            android:background="@color/gray"
+            android:padding="@dimen/margin_tv_10dp"
+            android:text="连接日志："
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_12sp" />
+
+
+    </LinearLayout>
+</ScrollView>

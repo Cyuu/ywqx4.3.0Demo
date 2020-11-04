@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_tv_8dp"
+    android:background="@drawable/bg_white_corner"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_tv_10dp"
+    android:paddingRight="@dimen/margin_tv_10dp">
+
+    <TextView
+        android:id="@+id/alarm_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_tv_3dp"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text="告警开始："
+        android:textColor="@color/red_color"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/alarm_cancel_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_tv_3dp"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text="告警结束："
+        android:textColor="@color/red_color"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/alarm_handle_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text="处理人："
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/alarm_handle_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_tv_3dp"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text="处理时间："
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/alarm_handle_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text="处理类型："
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+</LinearLayout>

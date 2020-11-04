@@ -1,0 +1,292 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <include layout="@layout/common_top" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_tv_10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_new_radar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_corner"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_tv_10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_radarpic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_circle_green"
+                            android:padding="@dimen/margin_tv_10dp"
+                            android:src="@mipmap/icon_radar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_radarpic"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="雷达数据"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_look_video"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_tv_10dp"
+                        android:layout_marginRight="@dimen/margin_tv_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_corner"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_tv_10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_video_look"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_circle_orange"
+                            android:padding="@dimen/margin_tv_10dp"
+                            android:src="@drawable/ic_video_tag" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_video_look"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="实时视频"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_get_hdpic"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_corner"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_tv_10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_bigpic_get"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_circle_blue"
+                            android:padding="@dimen/margin_tv_10dp"
+                            android:src="@mipmap/ic_corp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_bigpic_get"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="获取高清图"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_14sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_tv_10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_new_image"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_corner"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_tv_10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_circle_green"
+                            android:padding="@dimen/margin_tv_10dp"
+                            android:src="@mipmap/ic_pic_white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_pic"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="最新图片"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_14sp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/layout_his_video"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_tv_10dp"
+                        android:layout_marginRight="@dimen/margin_tv_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_corner"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_tv_10dp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/iv_video_his"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_circle_orange"
+                            android:padding="@dimen/margin_tv_10dp"
+                            android:src="@drawable/ic_video_tag" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_video_his"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="历史视频"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_14sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_look_hdpic"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_white_corner"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_tv_10dp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/iv_bigpic_look"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_circle_blue"
+                            android:padding="@dimen/margin_tv_10dp"
+                            android:src="@mipmap/ic_hd" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_bigpic_look"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="查看高清图"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_14sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/rt_video_part" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_10dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:layout_marginTop="@dimen/margin_tv_3dp"
+                    android:background="@drawable/bg_white_corner"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_tv_10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/detail_tv_title_style"
+                            android:text="地面监测单元主控(GSTR)监测状态：" />
+
+                        <TextView
+                            android:id="@+id/unit_gstr_monitor"
+                            style="@style/detail_status_value_style" />
+                    </LinearLayout>
+
+                    <View style="@style/divide_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/detail_tv_title_style"
+                            android:text="地面监测单元主控(GSTR)运行状态：" />
+
+                        <TextView
+                            android:id="@+id/unit_gstr_run"
+                            style="@style/detail_status_value_style" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 控制信息 -->
+                <include layout="@layout/unit_detail_control_part" />
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

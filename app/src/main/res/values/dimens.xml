@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- 标题栏高度 -->
+    <dimen name="common_top_height">45dp</dimen>
+    <!-- 按钮高度 -->
+    <dimen name="common_button_height_50">50dp</dimen>
+    <!-- 按钮高度 -->
+    <dimen name="common_btn_height">40dp</dimen>
+    <!-- 按钮高度 -->
+    <dimen name="common_btn_height_small">35dp</dimen>
+
+    <!-- 按钮高度 -->
+    <dimen name="common_btn_width">50dp</dimen>
+
+    <!-- layout的间距 -->
+    <dimen name="margin_tv_3dp">3dp</dimen>
+    <dimen name="margin_tv_5dp">5dp</dimen>
+    <dimen name="margin_tv_7dp">7dp</dimen>
+    <dimen name="margin_tv_8dp">8dp</dimen>
+    <dimen name="margin_tv_10dp">10dp</dimen>
+    <dimen name="margin_tv_12dp">12dp</dimen>
+    <dimen name="margin_tv_15dp">15dp</dimen>
+    <dimen name="margin_tv_20dp">20dp</dimen>
+    <dimen name="margin_tv_25dp">25dp</dimen>
+    <dimen name="margin_tv_30dp">30dp</dimen>
+    <dimen name="margin_tv_35dp">35dp</dimen>
+    <dimen name="margin_tv_38dp">38dp</dimen>
+    <dimen name="margin_tv_50dp">50dp</dimen>
+    <dimen name="margin_tv_40dp">40dp</dimen>
+    <dimen name="margin_tv_45dp">45dp</dimen>
+    
+    <!-- 字体 -->
+    <dimen name="txt_10sp">10sp</dimen>
+    <dimen name="txt_12sp">12sp</dimen>
+    <dimen name="txt_14sp">14sp</dimen>
+    <dimen name="txt_15sp">15sp</dimen>
+    <dimen name="txt_16sp">16sp</dimen>
+    <dimen name="txt_18sp">18sp</dimen>
+    <dimen name="txt_20sp">20sp</dimen>
+    <dimen name="txt_24sp">24sp</dimen>
+
+    <!-- item的圆角大小 -->
+    <dimen name="round_size">10dp</dimen>
+    <!-- item的圆角大小3 -->
+    <dimen name="round_3dp">3dp</dimen>
+
+</resources>

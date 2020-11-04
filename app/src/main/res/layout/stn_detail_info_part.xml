@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_white_corner"
+    android:layout_margin="@dimen/margin_tv_10dp"
+    android:paddingLeft="@dimen/margin_tv_12dp"
+    android:paddingRight="@dimen/margin_tv_10dp">
+
+    <TextView
+        android:id="@+id/dept_name"
+        style="@style/detail_tv_title_style"
+        tools:text="北京局" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/line_name"
+        style="@style/detail_tv_title_style"
+        tools:text="线路" />
+
+    <View style="@style/divide_line" />
+
+    <!-- 工务段 -->
+    <TextView
+        android:id="@+id/rs_name"
+        style="@style/detail_tv_title_style"
+        tools:text="工务段" />
+
+    <View style="@style/divide_line" />
+
+    <!-- 工区 -->
+    <TextView
+        android:id="@+id/rwi_name"
+        style="@style/detail_tv_title_style"
+        tools:text="工区" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/station_name"
+        style="@style/detail_tv_title_style"
+        tools:text="站点" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/keeper_name"
+        style="@style/detail_tv_title_style"
+        android:text="责任人：" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/stn_sim"
+        style="@style/detail_tv_title_style"
+        tools:text="责任人电话：" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/stn_sim_no"
+        style="@style/detail_tv_title_style"
+        tools:text="现场SIM卡：" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/stn_hard_ver"
+        style="@style/detail_tv_title_style"
+        tools:text="硬件版本：" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/stn_soft_ver"
+        style="@style/detail_tv_title_style"
+        tools:text="软件版本：" />
+
+    <View style="@style/divide_line" />
+
+
+
+</LinearLayout>

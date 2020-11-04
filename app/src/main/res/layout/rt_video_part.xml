@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_rt_video"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/margin_tv_8dp"
+    android:layout_marginRight="@dimen/margin_tv_8dp"
+    android:layout_marginTop="@dimen/margin_tv_3dp"
+    android:layout_marginBottom="@dimen/margin_tv_3dp"
+    android:visibility="gone"
+    android:background="@drawable/bg_white_orange_corner"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_tv_12dp"
+    android:paddingRight="@dimen/margin_tv_10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_8dp"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_tv_8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp"
+        android:text="实时视频" />
+
+    <View style="@style/divide_line" />
+
+    <com.thdz.ywqx.view.NoScrollListView
+        android:id="@+id/lv_rt_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/gray"
+        android:dividerHeight="0.5dp"
+        android:layout_marginBottom="2dp"
+        android:listSelector="@color/transparent" />
+
+</LinearLayout>

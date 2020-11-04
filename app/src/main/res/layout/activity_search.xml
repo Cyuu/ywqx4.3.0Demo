@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:orientation="vertical">
+
+            <!-- 筛选条件 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_tv_10dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/ic_ring_12"
+                android:drawablePadding="@dimen/margin_tv_10dp"
+                android:paddingLeft="@dimen/margin_tv_10dp"
+                android:paddingTop="@dimen/margin_tv_10dp"
+                android:paddingBottom="@dimen/margin_tv_10dp"
+                android:text="时间"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/txt_16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_tv_10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_tv_10dp"
+                        android:layout_marginRight="@dimen/margin_tv_10dp"
+                        android:text="开始时间:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_16sp" />
+
+                    <!-- editbale 过时，用et.setKeyListener(null); -->
+
+                    <EditText
+                        android:id="@+id/start_time_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_tv_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_edit_selector"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:hint="戳我选择"
+                        android:padding="@dimen/margin_tv_8dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_14sp" />
+
+                    <TextView
+                        android:id="@+id/start_time_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_tv_3dp"
+                        android:layout_marginRight="@dimen/margin_tv_12dp"
+                        android:text="！"
+                        android:textColor="@color/red_color"
+                        android:textSize="@dimen/txt_18sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_tv_10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_tv_10dp"
+                        android:layout_marginRight="@dimen/margin_tv_10dp"
+                        android:text="结束时间:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_16sp" />
+
+                    <EditText
+                        android:id="@+id/end_time_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_tv_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gray_edit_selector"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:hint="戳我选择"
+                        android:padding="@dimen/margin_tv_8dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_14sp" />
+
+                    <TextView
+                        android:id="@+id/end_time_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_tv_3dp"
+                        android:layout_marginRight="@dimen/margin_tv_12dp"
+                        android:text="！"
+                        android:textColor="@color/red_color"
+                        android:textSize="@dimen/txt_18sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_tv_10dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/ic_ring_12"
+                android:drawablePadding="@dimen/margin_tv_10dp"
+                android:paddingLeft="@dimen/margin_tv_10dp"
+                android:paddingTop="@dimen/margin_tv_10dp"
+                android:paddingBottom="@dimen/margin_tv_10dp"
+                android:text="监控点"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/txt_16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_tv_5dp"
+                android:paddingTop="@dimen/margin_tv_10dp"
+                android:paddingRight="@dimen/margin_tv_5dp"
+                android:paddingBottom="@dimen/margin_tv_5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_15dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:text="    局:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_16sp" />
+
+                <EditText
+                    android:id="@+id/dept_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_10dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:background="@drawable/bg_gray_edit_selector"
+                    android:editable="false"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="戳我选择"
+                    android:maxLines="1"
+                    android:padding="@dimen/margin_tv_8dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_tv_5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_15dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:text="站点:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_16sp" />
+
+                <EditText
+                    android:id="@+id/stn_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_10dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:background="@drawable/bg_gray_edit_selector"
+                    android:editable="false"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="戳我选择"
+                    android:maxLines="1"
+                    android:padding="@dimen/margin_tv_8dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_tv_5dp"
+                android:paddingTop="@dimen/margin_tv_5dp"
+                android:paddingRight="@dimen/margin_tv_5dp"
+                android:paddingBottom="@dimen/margin_tv_5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_15dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:text="单元:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_16sp" />
+
+                <EditText
+                    android:id="@+id/unit_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_10dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:background="@drawable/bg_gray_edit_selector"
+                    android:editable="false"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="戳我选择"
+                    android:maxLines="1"
+                    android:padding="@dimen/margin_tv_8dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_tv_5dp"
+                android:paddingTop="@dimen/margin_tv_5dp"
+                android:paddingRight="@dimen/margin_tv_5dp"
+                android:paddingBottom="@dimen/margin_tv_5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_15dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:text="处理:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_16sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_search_handle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_tv_3dp">
+
+                    <!--android:paddingBottom="@dimen/margin_tv_10dp"-->
+                    <!--android:paddingLeft="@dimen/margin_tv_15dp"-->
+                    <!--android:paddingRight="@dimen/margin_tv_15dp"-->
+                    <!--android:paddingTop="@dimen/margin_tv_10dp"-->
+
+                    <RadioButton
+                        android:id="@+id/rb_handle_all"
+                        style="@style/rb_style"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text=" 全部 " />
+
+                    <RadioButton
+                        android:id="@+id/rb_handle_yes"
+                        style="@style/rb_style"
+                        android:layout_marginLeft="@dimen/margin_tv_10dp"
+                        android:layout_weight="1"
+                        android:text="已处理" />
+
+                    <RadioButton
+                        android:id="@+id/rb_handle_no"
+                        style="@style/rb_style"
+                        android:layout_marginLeft="@dimen/margin_tv_10dp"
+                        android:layout_weight="1"
+                        android:text="未处理" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_tv_5dp"
+                android:paddingTop="@dimen/margin_tv_5dp"
+                android:paddingRight="@dimen/margin_tv_5dp"
+                android:paddingBottom="@dimen/margin_tv_10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tv_15dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:text="类型:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_16sp" />
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/margin_tv_10dp"-->
+                <!--android:background="@color/gray"-->
+                <!--android:visibility="gone"-->
+                <!--android:padding="@dimen/margin_tv_3dp"-->
+                <!--android:gravity="center_vertical">-->
+
+                <!--<Spinner-->
+                <!--android:id="@+id/spinner_type"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/ic_bg_spinner"-->
+                <!--android:elevation="@dimen/margin_tv_5dp"-->
+                <!--android:entries="@array/types"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingBottom="2dp"-->
+                <!--android:paddingLeft="@dimen/margin_tv_12dp"-->
+                <!--android:paddingRight="@dimen/margin_tv_12dp"-->
+                <!--android:paddingTop="2dp"-->
+                <!--android:spinnerMode="dropdown" />-->
+
+                <!--</RelativeLayout>-->
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <RadioGroup
+                        android:id="@+id/rg_search_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_tv_5dp"
+                        android:layout_marginRight="@dimen/margin_tv_10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_type_all"
+                            style="@style/rb_style"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text=" 全部 " />
+
+                        <RadioButton
+                            android:id="@+id/rb_type_yw"
+                            style="@style/rb_style"
+                            android:layout_marginLeft="@dimen/margin_tv_5dp"
+                            android:layout_weight="1"
+                            android:text="异物告警" />
+
+                        <RadioButton
+                            android:id="@+id/rb_type_gw"
+                            style="@style/rb_style"
+                            android:layout_marginLeft="@dimen/margin_tv_5dp"
+                            android:layout_weight="1"
+                            android:text="工务告警"
+                            android:textSize="@dimen/txt_14sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_type_yj"
+                            style="@style/rb_style"
+                            android:layout_marginLeft="@dimen/margin_tv_5dp"
+                            android:layout_weight="1"
+                            android:text=" 预警 " />
+
+                        <RadioButton
+                            android:id="@+id/rb_type_xmt"
+                            style="@style/rb_style"
+                            android:layout_marginLeft="@dimen/margin_tv_5dp"
+                            android:layout_marginRight="@dimen/margin_tv_10dp"
+                            android:layout_weight="1"
+                            android:text="小物体告警" />
+                    </RadioGroup>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_tv_10dp"
+                android:background="@color/white"
+                android:padding="@dimen/margin_tv_10dp">
+
+                <Button
+                    android:id="@+id/sure_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_tv_40dp"
+                    android:layout_marginLeft="@dimen/margin_tv_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_blue_selector"
+                    android:padding="@dimen/margin_tv_5dp"
+                    android:text="搜索"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_16sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent" />
+
+                <Button
+                    android:id="@+id/reset_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_tv_40dp"
+                    android:layout_marginRight="@dimen/margin_tv_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_gray_selector"
+                    android:padding="@dimen/margin_tv_5dp"
+                    android:text="重置"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <include android:id="@+id/img_top"
+        layout="@layout/common_top" />
+
+    <com.thdz.ywqx.view.TouchImageView
+        android:id="@+id/image_zoom"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/img_top"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/image_cutter_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/img_top"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:background="@color/black">
+
+        <com.thdz.ywqx.view.CutImageView
+            android:id="@+id/cutter_image"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/image_cutter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_tv_12dp"
+        android:padding="@dimen/margin_tv_15dp"
+        android:visibility="gone"
+        android:text="截取局部高清图"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_16sp" />
+
+
+    <TextView
+        android:id="@+id/quit_cutter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_tv_12dp"
+        android:padding="@dimen/margin_tv_15dp"
+        android:text="退出截取"
+        android:visibility="gone"
+        android:textColor="@color/red_color"
+        android:textSize="@dimen/txt_18sp" />
+
+
+    <TextView
+        android:id="@+id/image_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_tv_12dp"
+        android:padding="@dimen/margin_tv_15dp"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

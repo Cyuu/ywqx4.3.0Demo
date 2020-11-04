@@ -1,0 +1,253 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mine_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/common_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_tv_10dp">
+
+        <!-- 顶部图片占位 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_mine"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_tv_15dp">
+
+            <ImageView
+                android:id="@+id/mine_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_tv_10dp"
+                android:layout_marginTop="@dimen/margin_tv_25dp"
+                android:elevation="@dimen/margin_tv_5dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_tv_5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="铁路工务异物侵限"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mine_logo_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/margin_tv_50dp"
+                android:layout_height="@dimen/margin_tv_20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_tv_10dp"
+                android:src="@drawable/ic_logo"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_tv_10dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_tv_12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_head_default"/>
+
+                <TextView
+                    android:id="@+id/user_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_tv_8dp"
+                    android:text="用户名"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_18sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/place_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:text="南宁局"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- 需要提示用户，清理后，会将所有图片缓存清理掉，已保存图片除外 -->
+
+        <RelativeLayout
+            android:id="@+id/clear_cache_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_tv_10dp"
+            android:background="@drawable/btn_white_gray_selector"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_tv_15dp">
+
+            <TextView
+                android:id="@+id/clear_cache_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/clear_cache_count_img"
+                android:text="0 M"
+                android:textSize="@dimen/txt_16sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/clear_cache_count_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_right" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:drawablePadding="@dimen/margin_tv_3dp"
+                android:gravity="center_vertical"
+                android:text="清理缓存"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/bg_gray" />
+
+        <RelativeLayout
+            android:id="@+id/download_count_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_white_gray_selector"
+            android:padding="@dimen/margin_tv_15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载任务"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_14sp" />
+
+            <TextView
+                android:id="@+id/download_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/bg_gray" />
+
+        <RelativeLayout
+            android:id="@+id/check_update_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_white_gray_selector"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_tv_15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="检查更新"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16sp" />
+
+            <TextView
+                android:id="@+id/version_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="v1.0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_arrow_right" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_tv_10dp"
+            android:background="@drawable/btn_red_selector"
+            android:gravity="center"
+            android:padding="@dimen/margin_tv_12dp"
+            android:text="退出登录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_16sp" />
+
+
+    </LinearLayout>
+</ScrollView>

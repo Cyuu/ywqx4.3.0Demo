@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/unit_detail_control"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_tv_10dp"
+    android:layout_marginTop="@dimen/margin_tv_12dp"
+    android:layout_marginRight="@dimen/margin_tv_10dp"
+    android:background="@drawable/bg_white_corner"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_tv_5dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_tv_10dp">
+
+        <TextView
+            android:id="@+id/open_alarm_btn"
+            style="@style/detail_btn_style"
+            android:text="打开警号" />
+
+        <TextView
+            android:id="@+id/close_alarm_btn"
+            style="@style/detail_btn_style"
+            android:layout_marginLeft="@dimen/margin_tv_10dp"
+            android:text="关闭警号" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_tv_10dp">
+
+        <TextView
+            android:id="@+id/open_gstr_btn"
+            style="@style/detail_btn_style"
+            android:text="启用地面监测单元主控(Gstr)" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_tv_10dp">
+
+        <TextView
+            android:id="@+id/close_gstr_btn"
+            style="@style/detail_btn_style"
+            android:text="屏蔽地面监测单元主控(Gstr)" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_tv_12dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_tv_10dp">
+
+        <TextView
+            android:id="@+id/set_unitnormal"
+            style="@style/detail_btn_style"
+            android:text="设置地面监测单元主控(Gstr)警号正常模式"
+            android:textSize="@dimen/txt_14sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_deep">
+
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_tv_10dp">
+
+        <Button
+            android:id="@+id/btnplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange_color"
+            android:minHeight="36dp"
+            android:gravity="center"
+            android:padding="@dimen/margin_tv_5dp"
+            android:text="Rtsp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp" />
+
+        <Button
+            android:id="@+id/btnmp4play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange_color"
+            android:minHeight="36dp"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:padding="@dimen/margin_tv_5dp"
+            android:text="Mp4"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp" />
+
+        <Button
+            android:id="@+id/btnoggplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange_color"
+            android:minHeight="36dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:padding="@dimen/margin_tv_5dp"
+            android:text="OGG"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp" />
+
+        <Button
+            android:id="@+id/btnoggplay2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange_color"
+            android:minHeight="36dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:padding="@dimen/margin_tv_5dp"
+            android:text="OGG2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

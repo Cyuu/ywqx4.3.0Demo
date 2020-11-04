@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_tv_8dp"
+    android:background="@drawable/bg_white_corner"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_tv_12dp"
+    android:paddingRight="@dimen/margin_tv_10dp">
+
+    <!-- 站点基本信息 -->
+
+    <TextView
+        android:id="@+id/dept_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp"
+        tools:text="铁路局" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/line_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp"
+        tools:text="铁路线" />
+
+    <View style="@style/divide_line" />
+
+    <!-- 工务段 -->
+    <TextView
+        android:id="@+id/rs_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp"
+        tools:text="工务段" />
+
+    <View style="@style/divide_line" />
+
+    <!-- 工区 -->
+    <TextView
+        android:id="@+id/rwi_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp"
+        tools:text="工区" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/station_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp"
+        tools:text="铁路站" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/running_status_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text="站点开通情况："
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/keeper_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text="责任人："
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/keeper_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text="责任人电话："
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/stn_sim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:text="现场SIM卡："
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+</LinearLayout>

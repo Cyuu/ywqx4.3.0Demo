@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_corner"
+    android:layout_marginTop="@dimen/margin_tv_10dp"
+    android:layout_marginLeft="@dimen/margin_tv_10dp"
+    android:layout_marginRight="@dimen/margin_tv_10dp"
+    android:paddingLeft="@dimen/margin_tv_10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/detail_tv_title_style"
+            android:text="开通状态" />
+
+        <TextView
+            android:id="@+id/tv_open_status"
+            style="@style/detail_status_value_style" />
+
+    </LinearLayout>
+
+    <View style="@style/divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/detail_tv_title_style"
+            android:text="监测状态：" />
+
+        <TextView
+            android:id="@+id/tv_monitor_status"
+            style="@style/detail_status_value_style" />
+
+    </LinearLayout>
+
+    <View style="@style/divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="1dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/detail_tv_title_style"
+            android:text="强制状态：" />
+
+        <TextView
+            android:id="@+id/tv_force_status"
+            style="@style/detail_status_value_style" />
+    </LinearLayout>
+
+    <View style="@style/divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="1dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/detail_tv_title_style"
+            android:text="工作模式：" />
+
+        <TextView
+            android:id="@+id/tv_work_mode"
+            style="@style/detail_status_value_style" />
+
+    </LinearLayout>
+
+    <View style="@style/divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="1dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/detail_tv_title_style"
+            android:text="设备状态：" />
+
+        <TextView
+            android:id="@+id/tv_device_status"
+            style="@style/detail_status_value_style" />
+
+    </LinearLayout>
+
+    <View style="@style/divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="1dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/detail_tv_title_style"
+            android:text="运行状态：" />
+
+        <TextView
+            android:id="@+id/tv_run_status"
+            style="@style/detail_status_value_style" />
+
+    </LinearLayout>
+
+    <View style="@style/divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/detail_tv_title_style"
+            android:text=" 4G  状态：" />
+
+        <TextView
+            android:id="@+id/tv_fourg_status"
+            style="@style/detail_status_value_style" />
+
+    </LinearLayout> 
+
+</LinearLayout>

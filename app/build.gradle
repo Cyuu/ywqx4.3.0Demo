@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 27
+    // buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "com.thdz.ywqx"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 430
+        versionName '4.3.0'
+
+        //增加64位库的支持
+        ndk {
+            // abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "mips", "mips64", "x86", "x86_64"
+            abiFilters 'armeabi-v7a','arm64-v8a'
+        }
+
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [eventBusIndex: 'com.thdz.ywqx.MyEventBusIndex']
+            }
+        }
+
+        // 个推参数
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "JOKPyvk4tQA4ZhA1zSaZZ4",
+                GETUI_APP_KEY   : "DfBkvVDjX39U9lFbpXzh48",
+                GETUI_APP_SECRET: "90yaMnbjrI8ZxudVNNabk6",
+                PACKAGE_NAME    : applicationId
+        ]
+
+        vectorDrawables.useSupportLibrary = true
+
+        multiDexEnabled true
+
+    }
+
+    buildTypes {
+        release {
+            // old版本
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // 海康sdk的
+            //是否zip对齐
+            zipAlignEnabled true
+            // 缩减resource文件
+            shrinkResources false
+            //Proguard
+            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            // signingConfig signingConfigs.config
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+
+    greendao {
+        schemaVersion 11  // 指定数据库schema版本号，迁移等操作会用到
+        daoPackage 'com.thdz.ywqx.gen'  // 通过gradle插件生成的数据库相关文件的包名，默认为你的entity所在的包名
+        targetGenDir 'src/main/java'  // 这就是我们上面说到的自定义生成数据库文件的目录了，
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        ignoreWarnings true
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+//    implementation(name: 'dtchooser-debug', ext: 'aar')
+    implementation files('libs/HikVideoPlayer.jar')
+    implementation files('libs/dtchooser-debug.aar')
+
+//    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+//    testImplementation 'junit:junit:4.12'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation files('libs\\systembartint-1.0.4.jar')
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+
+
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
+
+    implementation 'org.greenrobot:greendao:3.3.0'
+    implementation 'org.greenrobot:greendao-generator:3.3.0'
+
+    implementation 'com.getui:sdk:2.10.2.0'
+
+    // implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+
+    implementation 'fm.jiecao:jiecaovideoplayer:5.5.2'
+
+    implementation 'com.blankj:utilcode:1.20.3'
+
+}

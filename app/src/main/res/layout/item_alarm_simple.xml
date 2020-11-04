@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_tv_10dp"
+    app:cardCornerRadius="3dp"
+    app:elevation="5dp">
+
+    <RelativeLayout
+        android:id="@+id/item_alarm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/layout_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_tv_12dp"
+            android:layout_marginRight="@dimen/margin_tv_10dp">
+
+            <TextView
+                android:id="@+id/running_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/open_true"
+                android:textColor="@color/green_deep_color"
+                android:textSize="@dimen/txt_16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_item"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout_content_al"
+            android:layout_alignTop="@+id/layout_content_al"
+            android:layout_marginBottom="@dimen/margin_tv_15dp"
+            android:layout_marginLeft="@dimen/margin_tv_5dp"
+            android:layout_marginRight="@dimen/margin_tv_5dp"
+            android:layout_marginTop="@dimen/margin_tv_15dp"
+            android:layout_toRightOf="@+id/layout_open"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/layout_content_al"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/line_item"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_tv_5dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_tv_5dp">
+
+                <!-- 局名称 -->
+                <TextView
+                    android:id="@+id/dept_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_ju"
+                    android:drawablePadding="@dimen/margin_tv_3dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/margin_tv_3dp"
+                    android:text="局"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <!-- 站点名称 -->
+                <TextView
+                    android:id="@+id/station_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_zhan"
+                    android:drawablePadding="@dimen/margin_tv_3dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/margin_tv_3dp"
+                    android:paddingLeft="@dimen/margin_tv_3dp"
+                    android:text="站点"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <!-- 单元名称 -->
+                <TextView
+                    android:id="@+id/unit_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_danyuan"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/margin_tv_3dp"
+                    android:paddingBottom="@dimen/margin_tv_3dp"
+                    android:paddingLeft="@dimen/margin_tv_3dp"
+                    android:text="单元"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/txt_15sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/item_alarm_layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_alarm_layout2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_tv_5dp"
+                    android:layout_marginTop="@dimen/margin_tv_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/ic_time_start"
+                        android:drawablePadding="@dimen/margin_tv_5dp"
+                        android:gravity="center_vertical"
+                        android:text="开始："
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/txt_14sp" />
+
+                    <!-- 2016-08-19 08:32:28 -->
+
+                    <TextView
+                        android:id="@+id/start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/red_color"
+                        android:textSize="@dimen/txt_14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_alarm_layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_alarm_layout4"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/margin_tv_15dp"
+                    android:layout_marginLeft="@dimen/margin_tv_5dp"
+                    android:layout_marginTop="@dimen/margin_tv_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/ic_time_end"
+                        android:drawablePadding="@dimen/margin_tv_5dp"
+                        android:gravity="center_vertical"
+                        android:text="结束："
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/txt_14sp" />
+
+                    <TextView
+                        android:id="@+id/stop_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/red_color"
+                        android:textSize="@dimen/txt_14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/alarm_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_tv_12dp"
+            android:background="@drawable/bg_red_left_corner"
+            android:paddingBottom="@dimen/margin_tv_5dp"
+            android:paddingLeft="@dimen/margin_tv_15dp"
+            android:paddingRight="@dimen/margin_tv_10dp"
+            android:paddingTop="@dimen/margin_tv_5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp"
+            tools:text="小物体告警" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

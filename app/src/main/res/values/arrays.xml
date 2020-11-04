@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="titles">
+        <item>站点详情</item>
+        <item>单元列表</item>
+        <item>IPC列表</item>
+    </string-array>
+
+    <string-array name="types">
+        <item>全部</item>
+        <item>预警</item>
+        <item>小物体告警</item>
+        <item>工务告警</item>
+        <item>异物告警</item>
+    </string-array>
+
+</resources>

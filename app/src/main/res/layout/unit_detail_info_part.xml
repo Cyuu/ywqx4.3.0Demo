@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_tv_10dp"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_tv_10dp"
+    android:paddingRight="@dimen/margin_tv_10dp" >
+
+    <TextView
+        android:id="@+id/dept_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_ju"
+        android:drawablePadding="@dimen/margin_tv_5dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_gray" />
+
+    <TextView
+        android:id="@+id/line_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_xian"
+        android:drawablePadding="@dimen/margin_tv_5dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_gray" />
+
+    <TextView
+        android:id="@+id/station_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_zhan"
+        android:drawablePadding="@dimen/margin_tv_5dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_gray" />
+
+    <TextView
+        android:id="@+id/pcdt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_p"
+        android:drawablePadding="@dimen/margin_tv_8dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:paddingLeft="1dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_gray" />
+
+    <TextView
+        android:id="@+id/unit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_danyuan"
+        android:drawablePadding="@dimen/margin_tv_5dp"
+        android:paddingBottom="@dimen/margin_tv_10dp"
+        android:paddingTop="@dimen/margin_tv_10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_16sp" />
+
+</LinearLayout>

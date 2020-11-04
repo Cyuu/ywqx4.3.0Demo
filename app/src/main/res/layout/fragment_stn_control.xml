@@ -1,0 +1,48 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/control_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/bg_divider_line_gray"
+            android:dividerPadding="1dp"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <!-- 监控点信息 -->
+            <include layout="@layout/stn_detail_info_part" />
+
+            <TextView
+                android:id="@+id/journey_route"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_tv_10dp"
+                android:layout_marginRight="@dimen/margin_tv_10dp"
+                android:layout_marginTop="@dimen/margin_tv_3dp"
+                android:layout_marginBottom="@dimen/margin_tv_3dp"
+                android:background="@drawable/bg_white_corner"
+                android:gravity="center"
+                android:padding="@dimen/margin_tv_12dp"
+                android:text="查看出行路线"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/txt_18sp" />
+
+            <!-- 系统监测状态 -->
+            <include layout="@layout/stn_detail_state_part" />
+
+            <include layout="@layout/stn_detail_control_part" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

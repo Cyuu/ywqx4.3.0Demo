@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_tv_10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/detail_tv_title_style"
+            android:text="地面监测单元主控(GSTR)监测：" />
+
+        <TextView
+            android:id="@+id/unit_gstr_monitor"
+            style="@style/detail_status_value_style" />
+    </LinearLayout>
+
+    <View style="@style/divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/detail_tv_title_style"
+            android:text="地面监测单元主控(GSTR)运行：" />
+
+        <TextView
+            android:id="@+id/unit_gstr_run"
+            style="@style/detail_status_value_style" />
+    </LinearLayout>
+
+    <View style="@style/divide_line" />
+
+</LinearLayout>

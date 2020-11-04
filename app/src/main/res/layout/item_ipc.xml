@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="2dp"
+    app:cardCornerRadius="10dp"
+    app:elevation="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_tv_5dp"
+        android:paddingLeft="@dimen/margin_tv_10dp"
+        android:paddingRight="@dimen/margin_tv_10dp"
+        android:paddingTop="@dimen/margin_tv_10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/ipc_image"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_tv_5dp">
+
+
+            <TextView
+                android:id="@+id/ipc_sid_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_tv_5dp"
+                android:layout_marginRight="@dimen/margin_tv_10dp"
+                android:text="IPC设备编号"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16sp" />
+
+            <TextView
+                android:id="@+id/nvr_sid_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_tv_5dp"
+                android:layout_marginTop="@dimen/margin_tv_10dp"
+                android:text="NVR设备编号："
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/txt_14sp" />
+
+            <TextView
+                android:id="@+id/nvr_channel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_tv_5dp"
+                android:layout_marginTop="@dimen/margin_tv_5dp"
+                android:text="NVR通道："
+                android:textColor="@color/blue_color"
+                android:textSize="@dimen/txt_14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ipc_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left"
+            android:background="@drawable/ic_ipc" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

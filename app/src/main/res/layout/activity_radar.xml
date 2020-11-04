@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/radarview_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/margin_tv_12dp"
+        android:text="雷达数据"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_18sp" />
+
+    <com.thdz.ywqx.view.RadarView
+        android:id="@+id/radarview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/radarview_title" />
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radarview_title"
+        android:padding="@dimen/margin_tv_5dp"
+        android:textColor="@color/black_light"
+        tools:text="天河局_416点_unit11_异物告警雷达数据_2018-08-16 18:06:20" />
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        tools:text="" />
+
+</RelativeLayout>

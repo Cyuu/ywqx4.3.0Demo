@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thdz.ywqx">
+
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 如果需要设置前台是否显示通知，需要设置这个权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- ibeancon 需要蓝牙权限 -->
+<!--    <uses-permission android:name="android.permission.BLUETOOTH" />-->
+<!--    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />-->
+    <!-- 支持个推3.0 电子围栏功能 -->
+<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.com.thdz.ywqx" />
+    <!-- 替换为第三方应用的包名 -->
+    <permission
+        android:name="getui.permission.GetuiService.com.thdz.ywqx"
+        android:protectionLevel="normal" /> <!-- 替换为第三方应用的包名 -->
+    <!-- 个推SDK权限配置结束 -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--<uses-permission android:name="android.permission.CALL_PHONE" />-->
+    <!-- SDK2.1新增获取用户位置信息 -->
+    <!--<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />-->
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取用户手机的IMEI，用来唯一的标识用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 扫描全盘图片 -->
+    <!--<uses-permission android:name="android.permission.RESTART_PACKAGES" />-->
+
+    <application
+        android:name="com.thdz.ywqx.app.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+
+        <!-- test.RadarViewActivity LoginActivity -->
+        <activity android:name="com.thdz.ywqx.ui.Activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 主页 -->
+        <!-- android:launchMode="singleTop" 表示：跳转到这个已有页面，将使用原有Activity实例，不会新建，如果不加Singletop，则会销毁原来的，创建新的 -->
+        <activity android:name="com.thdz.ywqx.ui.Activity.MainActivity" />
+
+        <activity
+            android:name="com.thdz.ywqx.ui.Activity.TestActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 站点 StationDetailTabActivity -->
+        <activity android:name="com.thdz.ywqx.ui.Activity.station.StationDetailTabActivity" />
+        <activity android:name="com.thdz.ywqx.ui.Activity.station.UnitDetailActivity" />
+
+        <activity android:name="com.thdz.ywqx.ui.Activity.station.DeptListActivity" />
+        <activity android:name="com.thdz.ywqx.ui.Activity.station.StationListActivity" />
+        <activity android:name="com.thdz.ywqx.ui.Activity.station.UnitListActivity" />
+
+
+        <!-- 告警 -->
+        <activity android:name="com.thdz.ywqx.ui.Activity.alarm.AlarmDetailActivity" />
+        <!-- 搜索 -->
+        <activity android:name="com.thdz.ywqx.ui.Activity.alarm.SearchActivity" />
+        <activity android:name="com.thdz.ywqx.ui.Activity.alarm.HistoryListActivity" />
+
+        <!-- 查看大图 -->
+        <activity android:name="com.thdz.ywqx.ui.Activity.ImageActivity" />
+        <activity android:name="com.thdz.ywqx.ui.Activity.RadarViewActivity" />
+        <activity android:name="com.thdz.ywqx.ui.video.PreEasyActivity" />
+        <activity
+            android:name="com.thdz.ywqx.ui.video.PreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.thdz.ywqx.ui.video.HistoryVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <!-- 播放实时视频 -->
+        <!--<activity android:name="com.thdz.ywqx.ui.Activity.play.PlayerActivity" />-->
+        <!--<activity android:name="com.thdz.ywqx.ui.Activity.VideoActivity" />-->
+
+        <!-- 启动手机 -->
+        <receiver android:name="com.thdz.ywqx.service.BootPhoneReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name="com.thdz.ywqx.service.PushBackReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.JOKPyvk4tQA4ZhA1zSaZZ4" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

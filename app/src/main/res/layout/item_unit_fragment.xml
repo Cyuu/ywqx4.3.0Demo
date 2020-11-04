@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="2dp"
+    app:cardCornerRadius="10dp"
+    app:elevation="5dp">
+
+    <LinearLayout
+        android:id="@+id/unit_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/unit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/orange_color"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_tv_5dp"
+            android:paddingLeft="@dimen/margin_tv_12dp"
+            android:paddingRight="@dimen/margin_tv_12dp"
+            android:paddingTop="@dimen/margin_tv_5dp"
+            android:text="单元"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp" />
+
+
+        <TextView
+            android:id="@+id/unit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_tv_5dp"
+            android:layout_marginLeft="@dimen/margin_tv_10dp"
+            android:layout_marginRight="@dimen/margin_tv_5dp"
+            android:layout_marginTop="@dimen/margin_tv_5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minLines="2"
+            android:text="xxx单元"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_16sp" />
+
+        <TextView
+            android:id="@+id/station_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_tv_5dp"
+            android:text=""
+            android:textColor="@color/red_color"
+            android:textSize="@dimen/txt_16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

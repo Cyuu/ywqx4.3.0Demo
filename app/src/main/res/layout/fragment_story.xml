@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/selection_layout">
+
+        <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout
+            android:id="@+id/swipy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/transparent"
+                android:dividerHeight="@dimen/margin_tv_5dp"
+                android:listSelector="@color/transparent"
+                android:padding="@dimen/margin_tv_8dp" />
+        </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+
+        <include layout="@layout/common_loading" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/moni_top"
+        layout="@layout/common_top_search" />
+
+    <!-- 筛选条件 -->
+
+    <RadioGroup
+        android:id="@+id/selection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/moni_top"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="0.5dp"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/towdays_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_rb_time"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/margin_tv_10dp"
+            android:text="2天"
+            android:textColor="@drawable/selector_rb_txt_color"
+            android:textSize="@dimen/txt_16sp" />
+
+        <RadioButton
+            android:id="@+id/week_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_rb_time"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/margin_tv_10dp"
+            android:text="1周"
+            android:textColor="@drawable/selector_rb_txt_color"
+            android:textSize="@dimen/txt_16sp" />
+
+        <RadioButton
+            android:id="@+id/monthhalf_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_rb_time"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/margin_tv_10dp"
+            android:text="半月"
+            android:textColor="@drawable/selector_rb_txt_color"
+            android:textSize="@dimen/txt_16sp" />
+
+        <RadioButton
+            android:id="@+id/month_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_rb_time"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/margin_tv_10dp"
+            android:text="1月"
+            android:textColor="@drawable/selector_rb_txt_color"
+            android:textSize="@dimen/txt_16sp" />
+    </RadioGroup>
+
+</RelativeLayout>
